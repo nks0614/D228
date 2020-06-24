@@ -4,26 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        background-color: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      .form-signin {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        margin: auto;
+      }
+    </style>
   </head>
-  <body>
-    <div class="register">
-      <div class="register_text">
-        <span>회원가입</span>
+  <body class="text-center">
+    <form class="form-signin">
+      <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
+      <div class="form-group">
+        <label class="sr-only" for="register_id">ID</label>
+        <input
+          placeholder="ID"
+          type="text"
+          class="form-control"
+          id="register_id"
+          autofocus
+        />
+
+        <label class="sr-only" for="register_pw">Password</label>
+        <input
+          placeholder="Password"
+          type="password"
+          class="form-control"
+          id="register_pw"
+        />
+
+        <label class="sr-only" for="register_pw_check">Password</label>
+        <input
+          placeholder="Password Confirm"
+          type="password"
+          class="form-control"
+          id="register_pw_check"
+        />
       </div>
-      <div class="register_name"><input type="text" placeholder="이름" /></div>
-      <div class="register_id"><input type="text" placeholder="아이디" /></div>
-      <div class="register_pw">
-        <input type="password" placeholder="비밀번호" />
+      <div class="form-group">
+        <label class="sr-only" for="register_name">Name</label>
+        <input
+          placeholder="Name"
+          type="text"
+          class="form-control"
+          id="register_name"
+          autofocus
+        />
+
+        <label class="sr-only" for="register_company">Company</label>
+        <input
+          placeholder="Company"
+          type="text"
+          class="form-control"
+          id="register_company"
+        />
+
+        <label class="sr-only" for="register_recommend">Recommend</label>
+        <input
+          placeholder="Recommend"
+          type="text"
+          class="form-control"
+          id="register_recommend"
+        />
       </div>
-      <div class="register_pwCheck">
-        <input type="password" placeholder="비밀번호 확인" />
-      </div>
-      <div class="register_company">
-        <input type="text" placeholder="회사" />
-      </div>
-      <div class="register_recomend">
-        <input type="text" placeholder="추천인" />
-      </div>
-    </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">
+        Sign Up
+      </button>
+    </form>
   </body>
 </html>
