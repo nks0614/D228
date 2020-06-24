@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: left;
+        }
+
+        body {
+            background-color: #FAFAFA;
+        }
+
+        #first {
+            text-align: left;
+            background-color: #F2F2F2;
+        }
+
+        #second {
+            background-color: white;
+        }
+
+        #first,
+        #second {
+            border: 1px solid #D8D8D8;
+            padding: 8px;
+            height: 50px;
+        }
+
+
+        table {
+            border-collapse: collapse;
+            position: relative;
+            top: 20px;
+            left: 20px;
+            width: 97%;
+        }
+
+        #button {
+
+            position: relative;
+            background-color: white;
+            border-radius: 4px;
+            border-color: #D8D8D8;
+            color: black;
+            padding: 5px;
+            width: 100%;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <form action="">
+
+            <table>
+
+                <tr>
+                    <th>
+                        <p>정보 관리</p>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="first">아이디</td>
+                    <td id="second"><input type="text" required></td>
+                </tr>
+
+                <tr>
+                    <th id="first">비밀번호</td>
+                    <td id="second"><input type="password" required></td>
+                </tr>
+
+                <tr>
+                    <th id="first">생년월일</td>
+                    <td id="second">
+                        <input type="date" max="9999-12-31" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th id="first">이메일</td>
+                    <td id="second"><input type="email" required></td>
+                </tr>
+
+                <tr>
+                    <th id="first">이름</td>
+                    <td id="second"><input type="text" name="name" placeholder="이름" required></td>
+                </tr>
+
+                <tr>
+                    <th><input type="button" value="수정" id="button"></th>
+                </tr>
+
+            </table>
+
+        </form>
+    </div>
+</body>
+
+</html>
