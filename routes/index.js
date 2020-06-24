@@ -10,8 +10,8 @@ router.get("/member/list", function (req, res, next) {
   res.render("member/list");
 });
 
-router.get("/register", function (req, res, next) {
-  res.render("register/index");
+router.get("/member/register", function (req, res, next) {
+  res.render("member/register");
 });
 
 module.exports = router;
