@@ -1,28 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
+    <%- include ("../include/declare.ejs") %>
+    <style>
+      span {
+        text-align: left;
+        margin-top: 1.2rem;
+        color: gray;
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <div>
-        <span>id</span>
-        <span>id</span>
-        <span>id</span>
-        <span>id</span>
-        <span>id</span>
-        <span>id</span>
-        <span>id</span>
+    <%- include ("../include/header.ejs") %>
+    <div class="container" style="margin-left: 0.8rem; margin-top: 1.5rem;">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          float: left;
+          text-align: left;
+        "
+      >
+        <span style="float: left;">ID</span>
+        <span>성명</span>
+        <span>생년월일</span>
+        <span>가입일</span>
+        <span>우편번호</span>
+        <span>주소</span>
+        <span>전화번호</span>
+        <span>휴대전화</span>
+        <span>추천인</span>
+        <span>비고</span>
       </div>
+      <div
+        style="
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+          padding-left: 5rem;
+        "
+      >
+        <span>202015</span>
+        <span>홍길동</span>
+        <span>1945. 3. 22</span>
+        <span>2017. 11. 23</span>
+        <span>72492</span>
+        <span>대구광역시 동구 봉무동</span>
+        <span>053-000-0000</span>
+        <span>010-0000-1234</span>
+        <span>없음</span>
+        <span></span>
+      </div>
+      <div style="clear: both; margin-top: 5rem;">
+        <span>회원종류</span>
+        <span style="margin-left: 4.7rem;">일반회원</span>
+      </div>
+      <button
+        type="button"
+        class="btn btn-primary"
+        style="margin-top: 5rem; margin-left: 17rem; width: 8rem;"
+      >
+        정보변경
+      </button>
       <div></div>
     </div>
+    <%- include ("../include/footer.ejs") %>
   </body>
 </html>
