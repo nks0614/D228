@@ -14,6 +14,10 @@ router.get("/member/register", function (req, res, next) {
   res.render("member/register");
 });
 
+router.get("/member/detail", function (req, res, next) {
+  res.render("member/detail");
+});
+
 router.get("/merit/register", function (req, res, next) {
   res.render("merit/register");
 });
