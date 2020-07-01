@@ -22,10 +22,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+app.use("/js", express.static(path.join(__dirname, "public/javascripts")));
 app.use("/js", express.static(path.join(__dirname, "node_modules/jquery/dist")));
 app.use("/js", express.static(path.join(__dirname, "node_modules/bootstrap/dist/js")));
-//app.use("/js", express.static(path.join(__dirname, "node_modules/@popperjs/core/dist")));
 app.use("/css", express.static(path.join(__dirname, "node_modules/bootstrap/dist/css")));
+
+app.use("/datepicker-bootstrap", express.static(path.join(__dirname, "node_modules/datepicker-bootstrap")));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
