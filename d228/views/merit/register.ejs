@@ -25,20 +25,32 @@
 
       <form>
         <div class="form-group row">
-          <label for="txt_id" class="col-sm-2 col-form-label">ID</label>
-          <div class="col-sm-2">
-            <input type="text" class="form-control" id="txt_id" />
+          <label for="txt_id" class="col-sm-2 col-form-label">회원아이디</label>
+          <div class="col-sm-3">
+            <select class="form-control" id="txt_id">
+              <option></option>
+            </select>
           </div>
-          <button class="btn btn-outline-primary btn-sm">ID 만들기</button>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" id="txt_id_search" />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="txt_year" class="col-sm-2 col-form-label">연번</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="txt_year" />
+          </div>
+          <button class="btn btn-outline-primary btn-sm">연번 만들기</button>
           <div class="col-sm-4" style="text-align: center; padding-top: 5px;">
             <small
-              id="help_id"
+              id="help_year"
               class="form-text text-danger"
               style="display: none;"
-              >회원아이디를 입력하세요.</small
+              >연번을 입력하세요.</small
             >
           </div>
         </div>
+
         <div class="form-group row">
           <label for="txt_name" class="col-sm-2 col-form-label">성명</label>
           <div class="col-sm-3">
@@ -67,16 +79,11 @@
           </div>
         </div>
         <div class="form-group row">
-          <label for="txt_register_date" class="col-sm-2 col-form-label"
-            >가입일</label
+          <label for="txt_school" class="col-sm-2 col-form-label"
+            >출신 학교</label
           >
           <div class="col-sm-3">
-            <input type="text" class="form-control" id="txt_register_date" />
-          </div>
-          <div class="col-sm-4" style="text-align: center; padding-top: 5px;">
-            <small id="help_birthday" class="form-text text-muted"
-              >YYYY-MM-DD 형식으로 입력하세요.</small
-            >
+            <input type="text" class="form-control" id="txt_school" />
           </div>
         </div>
         <div class="form-group row">
@@ -109,58 +116,26 @@
             <input type="text" class="form-control" id="txt_phone_mobile" />
           </div>
         </div>
+
         <div class="form-group row">
-          <label for="cmb_introducer" class="col-sm-2 col-form-label"
-            >추천인</label
-          >
+          <label for="txt_order" class="col-sm-2 col-form-label">기수</label>
           <div class="col-sm-3">
-            <select class="form-control" id="cmb_introducer">
-              <option></option>
-            </select>
+            <input type="text" class="form-control" id="txt_order" />
           </div>
-          <div class="col-sm-2">
-            <input type="text" class="form-control" id="txt_introducer" />
+        </div>
+
+        <div class="form-group row">
+          <label for="txt_note1" class="col-sm-2 col-form-label">비고</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" id="txt_note1"></textarea>
           </div>
         </div>
         <div class="form-group row">
-          <label for="txt_note" class="col-sm-2 col-form-label">비고</label>
+          <label for="txt_note2" class="col-sm-2 col-form-label"
+            >특이사항</label
+          >
           <div class="col-sm-10">
-            <textarea class="form-control" id="txt_note"></textarea>
-          </div>
-        </div>
-        <div class="form-group row">
-          <legend class="col-form-label col-sm-2 pt-0">회원종류</legend>
-          <div class="col-sm-10">
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="type"
-                id="rd_type_m"
-                value="M"
-              />
-              <label class="form-check-label" for="rd_type_m">일반회원</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="type"
-                id="rd_type_s"
-                value="S"
-              />
-              <label class="form-check-label" for="rd_type_s">학생회원</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="type"
-                id="rd_type_p"
-                value="P"
-              />
-              <label class="form-check-label" for="rd_type_p">후원회원</label>
-            </div>
+            <textarea class="form-control" id="txt_note2"></textarea>
           </div>
         </div>
         <div class="form-group row">
