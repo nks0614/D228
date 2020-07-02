@@ -14,6 +14,9 @@ router.get('/member/register', function(req, res, next) {
   res.render('member/register');
 });
 
+router.get('/data/sample', function(req, res, next) {
+  res.send({name: "영창", age: 11});
+});
 
 /*
 router.get('/include/header', function(req, res, next) {
