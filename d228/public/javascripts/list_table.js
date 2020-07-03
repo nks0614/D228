@@ -24,6 +24,8 @@
     };
 
     var listManager = {
+        sortAscendent: false,
+
         setLayer: function(layer)
         {
             this.layer = layer;
@@ -84,6 +86,11 @@
             var col = $("<col />");
             col.attr("width", column.width);
             this.table.find("colgroup").append(col);
+
+            var this1 = this;
+            th.on("click", function() {
+                this1.sort(column);
+            });
         },
 
         showLine: function(data)
@@ -102,7 +109,63 @@
             var td = $("<td />");
             tr.append(td);
             
-            var str = "";
+            var str = this.getShownString(column, data);
+            td.html(str || "&nbsp;");
+
+            if (column.align)
+            {
+                td.css("text-align", column.align);
+            }
+        },
+
+        sort: function(column)
+        {
+            if (column == this.sortColumn)
+            {
+                this.sortAscendent = this.sortAscendent ? false : true;
+            }
+            else
+            {
+                this.sortAscendent = true;
+            }
+            this.sortColumn = column;
+
+            var this1 = this;
+            this.list.sort(function(a, b) {
+                var strA = this1.getShownString(column, a) || ((this1.sortAscendent) ? "zzzz" : "0000");
+                var strB = this1.getShownString(column, b) || ((this1.sortAscendent) ? "zzzz" : "0000");
+
+                var value = (strA >= strB) ? 1 : -1;
+                value *= (this1.sortAscendent) ? 1 : -1;
+
+                return value;
+            });
+            listManager.showList(this.list);
+
+            this.showSortingHeader();
+        },
+
+        showSortingHeader: function()
+        {
+            var this1 = this;
+            var ths = this.thead.find("th");
+            ths.each(function(i, item) {
+                if (this1.columns[i] == this1.sortColumn)
+                {
+                    $(item).html(this1.columns[i].name + " " + (this1.sortAscendent ? "▼" : "▲"));
+                }
+                else
+                {
+                    $(item).html(this1.columns[i].name);
+                }
+            });
+
+            
+        },
+
+        getShownString: function(column, data)
+        {
+            var str;
             if (column.value)
             {
                 str = column.value;
@@ -117,13 +180,13 @@
                 str = column.fnFormat(str, data);
             }
 
-            td.html(str || "&nbsp;");
-
-            if (column.align)
+            if (str && typeof(str) === "string" && str.trim() == "")
             {
-                td.css("text-align", column.align);
+                str = null; 
             }
-        },
+
+            return str;
+        }
 
     };
 
