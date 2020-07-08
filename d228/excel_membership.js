@@ -24,6 +24,7 @@ function makeData()
     {
         json[i].birthday = parseDate(json[i].birthday);
         json[i].register_date = parseDate(json[i].register_date);
+        json[i].gender = (json[i].gender ? (json[i].gender == "남" ? "M" : "F") : null); 
 
         //console.log(json[i]);
     }
@@ -68,11 +69,19 @@ function saveData(con, data)
     sql += "    phone_mobile, ";
     //sql += "    introducer_id, ";
     sql += "    note, ";
-    sql += "    type) ";
+    sql += "    member_type, ";
+    sql += "    gender, ";
+    sql += "    school, ";
+    sql += "    grade, ";
+    sql += "    class1) ";
     sql += "VALUES ? ";
 
     var sqlQuery = con.query(sql, [data], function(err, result) {
-        console.log("err", err);
+        if (err)
+        {
+            console.log("err", err);
+        }
+        
         //console.log("result", result);
     });
 
@@ -109,7 +118,11 @@ function makeDataLine(data)
     result.push(data.phone_mobile);
     //result.push(data.introducer);
     result.push(data.note);
-    result.push("M");
+    result.push(data.member_type);
+    result.push(data.gender);
+    result.push(data.school);
+    result.push(data.grade);
+    result.push(data.class1);
 
     return result;
 }
@@ -124,6 +137,11 @@ function parseDate(str)
 
     if (typeof(str) == 'string')
     {
+        if (str.indexOf("-") > 0)
+        {
+            return str;
+        }
+
         var tokens = str.split(".");
 
         if (tokens.length < 3)

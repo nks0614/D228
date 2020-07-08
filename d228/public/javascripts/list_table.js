@@ -159,8 +159,6 @@
                     $(item).html(this1.columns[i].name);
                 }
             });
-
-            
         },
 
         getShownString: function(column, data)
