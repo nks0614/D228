@@ -25,7 +25,9 @@ router.get("/member/detail", function (req, res, next) {
 router.get("/merit/register", function (req, res, next) {
   res.render("merit/register");
 });
-
+router.get("/merit/changeinfo", function (req, res, next) {
+  res.render("merit/changeinfo");
+});
 /*
 router.get('/include/header', function(req, res, next) {
   res.render('include/header');
