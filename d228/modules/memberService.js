@@ -13,11 +13,11 @@ var api = {
         sql += "SELECT a.*, b.fee_year  ";
         sql += "  FROM membership AS a ";
         sql += "  LEFT JOIN (  ";
-        sql += "    	SELECT member_id, MAX(year) AS fee_year  ";
+        sql += "    	SELECT member_seq, MAX(year) AS fee_year  ";
         sql += "	      FROM membership_fee  ";
-        sql += "    	 GROUP BY member_id  ";
-        sql += "      ) AS b ON a.member_id = b.member_id  ";
-        sql += " ORDER BY a.member_id  ";
+        sql += "    	 GROUP BY member_seq  ";
+        sql += "      ) AS b ON a.member_seq = b.member_seq  ";
+        sql += " ORDER BY a.member_seq  ";
         
 
 /*
