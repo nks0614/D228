@@ -14,7 +14,10 @@ router.get("/member/register", function (req, res, next) {
   res.render("member/register");
 });
 
-router.get("/member/detail", function (req, res, next) {
+router.get('/data/sample', function(req, res, next) {
+  res.send({name: "영창", age: 11});
+
+  router.get("/member/detail", function (req, res, next) {
   res.render("member/detail");
 });
 

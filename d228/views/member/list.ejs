@@ -4,36 +4,12 @@
 <head>
     <%- include ("../include/declare.ejs") %>
     
-    <script src="/js/member_list.js"></script>
+    <script src="/js/list_table.js"></script>
+    <script src="/js/page/member_list.js"></script>
 
     <style>
-        .filterable {
-            margin-top: 15px;
-        }
-
-        .filterable .panel-heading .pull-right {
-            margin-top: -20px;
-        }
-
-        .filterable .filters input[disabled] {
-            background-color: transparent;
-            border: none;
-            cursor: auto;
-            box-shadow: none;
-            padding: 0;
-            height: auto;
-        }
-
-        .filterable .filters input[disabled]::-webkit-input-placeholder {
-            color: #333;
-        }
-
-        .filterable .filters input[disabled]::-moz-placeholder {
-            color: #333;
-        }
-
-        .filterable .filters input[disabled]:-ms-input-placeholder {
-            color: #333;
+        div#div_member_list th {
+            cursor: pointer;
         }
     </style>
  
@@ -45,7 +21,7 @@
  
     <div class="container">
         <div class="row">
-            <div class="panel panel-primary filterable">
+            <div class="panel panel-primary" style="width: 100%;">
                 <div class="panel-heading">
                     <h3 class="panel-title">회원목록</h3>
                 </div>
@@ -55,15 +31,12 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="txt_search">검색</span>
                             </div>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="txt_search">
+                            <input type="text" name="query" class="form-control" aria-label="Sizing example input" aria-describedby="txt_search">
                         </div>
                     </div>
                     <div class="col-4" style="padding-top: 5px;">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                회비 미납부 회원
-                            </label>
+                            <button class="btn btn-info btn-sm" id="btn_membership_fee" data_status="A" style="width: 10em;">회비납부 - 전체</button>
                         </div>
                     </div>
                     <div class="col-4" style="text-align: right;">
@@ -72,7 +45,8 @@
                     </div>
                 </div>
 
-                <div class="table-responsive">
+                <div class="table-responsive" id="div_member_list">
+                    <!--
                     <table class="table table-hover">
                         <thead>
                             <tr class="filters">
@@ -129,6 +103,7 @@
                             </tr>
                         </tbody>               
                     </table>
+                    -->
                 </div>
             </div>
         </div>
