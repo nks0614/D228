@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    
+    <style>
+        .filterable {
+            margin-top: 15px;
+        }
+        .filterable .panel-heading .pull-right {
+            margin-top: -20px;
+        }
+        .filterable .filters input[disabled] {
+            background-color: transparent;
+            border: none;
+            cursor: auto;
+            box-shadow: none;
+            padding: 0;
+            height: auto;
+        }
+        .filterable .filters input[disabled]::-webkit-input-placeholder {
+            color: #333;
+        }
+        .filterable .filters input[disabled]::-moz-placeholder {
+            color: #333;
+        }
+        .filterable .filters input[disabled]:-ms-input-placeholder {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal"><img src="/images/logo.png"></h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="/member/list">회원</a>
+            <a class="p-2 text-dark" href="#">유공자</a>
+            <a class="p-2 text-dark" href="#">관리자</a>
+        </nav>
+    </div>
+ 
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-primary filterable">
+                <div class="panel-heading">
+                    <h3 class="panel-title">관리자 관리</h3>
+                </div>
+                <div class="row" style="padding: 5px;">
+                    <div class="col-8"></div>
+                    <div class="col-4" style="text-align: right;">
+                        <button class="btn btn-secondary btn-sm">엑셀</button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr class="filters">
+                                <th><input type="text" class="form-control" placeholder="ID" disabled></th>
+                                <th><input type="text" class="form-control" placeholder="순번" disabled></th>
+                                <th><input type="text" class="form-control" placeholder="성명" disabled></th>
+                                <th><input type="text" class="form-control" placeholder="회비납부" disabled></th>
+                                <th><input type="text" class="form-control" placeholder="생년월일" disabled></th>
+                                <th><input type="text" class="form-control" placeholder="가입일" disabled></th>
+                                <th><input type="text" class="form-control" placeholder="소속(직업)" disabled></th>
+                                <th><input type="text" class="form-control" placeholder="비고" disabled></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>200224</td>
+                                <td>1215</td>
+                                <td>이소림</td>
+                                <td>O</td>
+                                <td>79.08.16</td>
+                                <td>20.05.29</td>
+                                <td>변호사</td>
+                                <td>a@b.com</td>
+                                <td><button>관리자 등록</button></td>
+                            </tr>
+                            <tr>
+                                <td>200224</td>
+                                <td>1215</td>
+                                <td>이소림</td>
+                                <td>O</td>
+                                <td>79.08.16</td>
+                                <td>20.05.29</td>
+                                <td></td>
+                                <td></td>
+                                <td><button>관리자 등록</button></td>
+                            </tr>
+                            <tr>
+                                <td>200224</td>
+                                <td>1215</td>
+                                <td>이소림</td>
+                                <td>O</td>
+                                <td>79.08.16</td>
+                                <td>20.05.29</td>
+                                <td></td>
+                                <td></td>
+                                <td><button>관리자 등록</button></td>
+                            </tr>
+                            <tr>
+                                <td>200224</td>
+                                <td>1215</td>
+                                <td>이소림</td>
+                                <td>O</td>
+                                <td>79.08.16</td>
+                                <td>20.05.29</td>
+                                <td></td>
+                                <td></td>
+                                <td><button>관리자 등록</button></td>
+                            </tr>
+                        </tbody>               
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
