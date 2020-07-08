@@ -4,7 +4,26 @@
     <%- include ("../include/declare.ejs") %>
     <script>
       const pay = () => {
-        document.getElementsByClassName("pay")[0].style.display = "block";
+        const html = `<div
+            style="width: 500px; background-color: lightgray; padding: 2rem;"
+          >
+            <div style="display: flex; justify-content: space-between;">
+              <span style="margin: 0; color: black;">회비 납부</span>
+              <input style="width: 150px;" type="date" />
+              <input style="width: 150px;" type="number" placeholder="금액" />
+            </div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 2rem;
+              "
+            >
+              <button class="btn btn-primary">저장</button>
+            </div>
+          </div>`;
+        $("#pay").append(html);
       };
     </script>
     <style>
@@ -131,31 +150,7 @@
             </tr>
           </table>
         </div>
-        <div
-          class="pay"
-          style="
-            display: none;
-            width: 500px;
-            background-color: lightgray;
-            padding: 2rem;
-          "
-        >
-          <div style="display: flex; justify-content: space-between;">
-            <span style="margin: 0; color: black;">회비 납부</span>
-            <input style="width: 150px;" type="date" />
-            <input style="width: 150px;" type="number" placeholder="금액" />
-          </div>
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin-top: 2rem;
-            "
-          >
-            <button class="btn btn-primary">저장</button>
-          </div>
-        </div>
+        <div id="pay"></div>
       </div>
     </div>
     <div
