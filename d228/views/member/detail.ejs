@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ("../include/declare.ejs") %>
+    <style>
+      span {
+        text-align: left;
+        margin-top: 1.2rem;
+        color: gray;
+      }
+      .left {
+        flex-grow: 1;
+      }
+      .right {
+        flex-grow: 1;
+      }
+      td {
+        width: 150px;
+        padding: 0.8rem;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include ("../include/header.ejs") %>
+    <div
+      style="
+        padding: 0rem 18rem;
+        margin-left: 0.8rem;
+        margin-top: 1.5rem;
+        display: flex;
+      "
+    >
+      <div class="left" style="width: 40rem; height: 40rem;">
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            float: left;
+            text-align: left;
+          "
+        >
+          <span style="float: left;">ID</span>
+          <span>성명</span>
+          <span>생년월일</span>
+          <span>가입일</span>
+          <span>우편번호</span>
+          <span>주소</span>
+          <span>전화번호</span>
+          <span>휴대전화</span>
+          <span>추천인</span>
+          <span>비고</span>
+        </div>
+        <div
+          style="
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            padding-left: 5rem;
+          "
+        >
+          <span>202015</span>
+          <span>홍길동</span>
+          <span>1945. 3. 22</span>
+          <span>2017. 11. 23</span>
+          <span>72492</span>
+          <span>대구광역시 동구 봉무동</span>
+          <span>053-000-0000</span>
+          <span>010-0000-1234</span>
+          <span>없음</span>
+          <span></span>
+        </div>
+        <div style="clear: both; margin-top: 5rem;">
+          <span>회원종류</span>
+          <span style="margin-left: 4.7rem;">일반회원</span>
+        </div>
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="margin-top: 5rem; margin-left: 17rem; width: 8rem;"
+        >
+          정보변경
+        </button>
+      </div>
+      <div class="right">
+        <div
+          style="
+            border: 1px solid black;
+            float: left;
+            padding: 20px 10px;
+            width: 100%;
+          "
+        >
+          <table>
+            <thead style="text-align: left;">
+              회비 납부 현황
+            </thead>
+            <tr>
+              <td>2020년</td>
+              <td>2020. 4. 12</td>
+              <td>30,000원</td>
+              <td><img src="#" /></td>
+            </tr>
+            <tr>
+              <td>2019년</td>
+              <td>납부안함</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>2018년</td>
+              <td>2018. 11. 22</td>
+              <td>30,000원</td>
+              <td><img src="#" /></td>
+            </tr>
+            <tr>
+              <td>2017년</td>
+              <td>2017. 8. 15</td>
+              <td>30,000원</td>
+              <td><img src="#" /></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <%- include ("../include/footer.ejs") %>
+  </body>
+</html>
