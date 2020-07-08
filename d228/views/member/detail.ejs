@@ -3,8 +3,10 @@
   <head>
     <%- include ("../include/declare.ejs") %>
     <script>
+      let payPopup = false;
       const pay = () => {
-        const html = `<div
+        if (!payPopup) {
+          const html = `<div
             style="width: 500px; background-color: lightgray; padding: 2rem;"
           >
             <div style="display: flex; justify-content: space-between;">
@@ -23,7 +25,9 @@
               <button class="btn btn-primary">저장</button>
             </div>
           </div>`;
-        $("#pay").append(html);
+          $("#pay").append(html);
+          payPopup = true;
+        }
       };
     </script>
     <style>
