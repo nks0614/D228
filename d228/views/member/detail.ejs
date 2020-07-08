@@ -2,6 +2,11 @@
 <html lang="en">
   <head>
     <%- include ("../include/declare.ejs") %>
+    <script>
+      const pay = () => {
+        document.getElementsByClassName("pay")[0].style.display = "block";
+      };
+    </script>
     <style>
       span {
         text-align: left;
@@ -9,10 +14,8 @@
         color: gray;
       }
       .left {
-        width: 410px;
-      }
-      .right {
-        flex-grow: 1;
+        width: 610px;
+        display: flex;
       }
       td {
         width: 150px;
@@ -23,74 +26,81 @@
   </head>
   <body>
     <%- include ("../include/header.ejs") %>
-    <div
-      style="
-        padding: 0rem 18rem;
-        margin-left: -15rem;
-        margin-top: 1.5rem;
-        display: flex;
-      "
-    >
-      <div class="left">
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            float: left;
-            text-align: left;
-          "
-        >
-          <span style="float: left;">ID</span>
-          <span>성명</span>
-          <span>생년월일</span>
-          <span>가입일</span>
-          <span>우편번호</span>
-          <span>주소</span>
-          <span>전화번호</span>
-          <span>휴대전화</span>
-          <span>추천인</span>
-          <span>비고</span>
+    <div style="display: flex; height: 550px;">
+      <div class="left" style="padding-left: 5rem;">
+        <div style="display: flex; flex-direction: column; text-align: left;">
+          <div
+            style="display: flex; width: 400px; justify-content: space-between;"
+          >
+            <span>ID</span>
+            <span>202015</span>
+          </div>
+          <div
+            style="display: flex; width: 400px; justify-content: space-between;"
+          >
+            <span>성명</span>
+            <span>홍길동</span>
+          </div>
+          <div
+            style="display: flex; width: 400px; justify-content: space-between;"
+          >
+            <span>생년월일</span>
+            <span>1945. 3. 22</span>
+          </div>
+          <div
+            style="display: flex; width: 400px; justify-content: space-between;"
+          >
+            <span>가입일</span>
+            <span>2017. 11. 23</span>
+          </div>
+          <div
+            style="display: flex; width: 400px; justify-content: space-between;"
+          >
+            <span>우편번호</span>
+            <span>72492</span>
+          </div>
+          <div
+            style="display: flex; width: 400px; justify-content: space-between;"
+          >
+            <span>주소</span>
+            <span>대구광역시 동구 </span>
+          </div>
+          <div
+            style="display: flex; width: 400px; justify-content: space-between;"
+          >
+            <span>전화번호</span>
+            <span>053-000-0000</span>
+          </div>
+          <div
+            style="display: flex; width: 400px; justify-content: space-between;"
+          >
+            <span>휴대전화</span>
+            <span>010-0000-1234</span>
+          </div>
+          <div
+            style="display: flex; width: 400px; justify-content: space-between;"
+          >
+            <span>추천인</span>
+            <span>없음</span>
+          </div>
+          <div
+            style="display: flex; width: 400px; justify-content: space-between;"
+          >
+            <span>회원종류</span>
+            <span>일반회원</span>
+          </div>
         </div>
-        <div
-          style="
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            padding-left: 5rem;
-          "
-        >
-          <span>202015</span>
-          <span>홍길동</span>
-          <span>1945. 3. 22</span>
-          <span>2017. 11. 23</span>
-          <span>72492</span>
-          <span>대구광역시 동구 봉무동</span>
-          <span>053-000-0000</span>
-          <span>010-0000-1234</span>
-          <span>없음</span>
-          <span></span>
-        </div>
-        <div style="clear: both; margin-top: 5rem;">
-          <span>회원종류</span>
-          <span style="margin-left: 4.7rem;">일반회원</span>
-        </div>
-        <button
-          type="button"
-          class="btn btn-primary"
-          style="margin-top: 5rem; margin-left: 17rem; width: 8rem;"
-        >
-          정보변경
-        </button>
       </div>
-      <div class="right">
-        <div
-          style="
-            border: 1px solid black;
-            float: left;
-            padding: 20px 10px;
-            width: 90%;
-          "
-        >
+      <div
+        class="right"
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 500px;
+          justify-content: space-between;
+        "
+      >
+        <div style="border: 1px solid black; float: left; padding: 20px 10px;">
           <table>
             <thead style="text-align: left;">
               회비 납부 현황
@@ -121,14 +131,53 @@
             </tr>
           </table>
         </div>
-        <button
-          type="button"
-          class="btn btn-primary"
-          style="width: 8rem; margin-top: 20.85rem; margin-left: 2rem;"
+        <div
+          class="pay"
+          style="
+            display: none;
+            width: 500px;
+            background-color: lightgray;
+            padding: 2rem;
+          "
         >
-          회비 납부
-        </button>
+          <div style="display: flex; justify-content: space-between;">
+            <span style="margin: 0; color: black;">회비 납부</span>
+            <input style="width: 150px;" type="date" />
+            <input style="width: 150px;" type="number" placeholder="금액" />
+          </div>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-top: 2rem;
+            "
+          >
+            <button class="btn btn-primary">저장</button>
+          </div>
+        </div>
       </div>
+    </div>
+    <div
+      style="
+        display: flex;
+        width: 800px;
+        justify-content: space-between;
+        margin-top: 5rem;
+        padding-left: 5rem;
+      "
+    >
+      <button type="button" class="btn btn-primary" style="width: 8rem;">
+        정보변경
+      </button>
+      <button
+        onclick="pay()"
+        type="button"
+        class="btn btn-primary"
+        style="width: 8rem;"
+      >
+        회비 납부
+      </button>
     </div>
     <%- include ("../include/footer.ejs") %>
   </body>
