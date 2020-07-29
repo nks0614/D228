@@ -26,6 +26,10 @@ router.get("/merit/register", function (req, res, next) {
   res.render("merit/register");
 });
 
+router.get("/merit/list", function (req, res, next) {
+  res.render("merit/list");
+});
+
 router.get("/merit/changeinfo", function (req, res, next) {
   res.render("merit/changeinfo");
 });
