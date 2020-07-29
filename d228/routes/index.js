@@ -22,6 +22,10 @@ router.get("/member/detail", function (req, res, next) {
   res.render("member/detail");
 });
 
+router.get("/manager/register", function (req, res, next) {
+  res.render("manager/register");
+});
+
 router.get("/merit/register", function (req, res, next) {
   res.render("merit/register");
 });
