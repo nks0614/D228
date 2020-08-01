@@ -30,6 +30,10 @@ router.get("/manager/list", function (req, res, next) {
   res.render("manager/list");
 });
 
+router.get("/manager/detail", function (req, res, next) {
+  res.render("manager/detail");
+});
+
 router.get("/manager/edit", function (req, res, next) {
   res.render("manager/edit");
 });
