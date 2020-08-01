@@ -26,6 +26,10 @@ router.get("/manager/register", function (req, res, next) {
   res.render("manager/register");
 });
 
+router.get("/manager/edit", function (req, res, next) {
+  res.render("manager/edit");
+});
+
 router.get("/merit/register", function (req, res, next) {
   res.render("merit/register");
 });
