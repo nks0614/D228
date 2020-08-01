@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ("../include/declare.ejs") %>
+    <style>
+      span {
+        text-align: left;
+        margin-top: 1.2rem;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include ("../include/header.ejs") %>
+    <div style="display: flex; height: 550px;">
+      <div class="left" style="padding-left: 5rem;">
+        <div style="display: flex; flex-direction: column; text-align: left;">
+          <div style="display: flex; width: 400px;">
+            <span style="width: 150px;">회원 아이디</span>
+            <span style="margin-left: 3rem;">202015</span>
+          </div>
+          <div style="display: flex; width: 400px;">
+            <span style="width: 150px;">연번</span>
+            <span style="margin-left: 3rem;">128</span>
+          </div>
+          <div style="display: flex; width: 400px;">
+            <span style="width: 150px;">성명</span>
+            <span style="margin-left: 3rem;">홍길동</span>
+          </div>
+          <div style="display: flex; width: 400px;">
+            <span style="width: 150px;">생년월일</span>
+            <span style="margin-left: 3rem;">1945. 3. 22</span>
+          </div>
+          <div style="display: flex; width: 400px;">
+            <span style="width: 150px;">우편번호</span>
+            <span style="margin-left: 3rem;">72492</span>
+          </div>
+          <div style="display: flex; width: 400px;">
+            <span style="width: 150px;">주소</span>
+            <span style="margin-left: 3rem;">대구광역시 동구 봉무동</span>
+          </div>
+          <div style="display: flex; width: 400px;">
+            <span style="width: 150px;">전화번호</span>
+            <span style="margin-left: 3rem;">053-000-0000</span>
+          </div>
+          <div style="display: flex; width: 400px;">
+            <span style="width: 150px;">휴대전화</span>
+            <span style="margin-left: 3rem;">010-0000-1234</span>
+          </div>
+          <div style="display: flex; width: 400px;">
+            <span style="width: 150px;">비고</span>
+            <span style="margin-left: 3rem;"></span>
+          </div>
+          <div style="display: flex; width: 400px;">
+            <span style="width: 150px;">특이사항</span>
+            <span style="margin-left: 3rem;"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="./edit">
+      <button
+        type="button"
+        class="btn btn-primary"
+        style="width: 8rem; margin-left: 5rem; margin-top: 3rem;"
+      >
+        정보 변경
+      </button>
+    </a>
+    <%- include ("../include/footer.ejs") %>
+  </body>
+</html>
